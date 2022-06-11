@@ -93,7 +93,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                           const SizedBox(height: 8),
                           CustomButton(
-                            text: 'Sign Up',
+                            text: 'Create Account',
                             onTap: () {},
                           )
                         ],
@@ -138,7 +138,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                           const SizedBox(height: 8),
                           CustomButton(
-                            text: 'Sign Up',
+                            text: 'Sign In',
                             onTap: () {},
                           )
                         ],
