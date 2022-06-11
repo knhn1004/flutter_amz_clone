@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_amz_clone/constants/global_variable.dart';
+import 'package:flutter_amz_clone/features/auth/screens/auth_screen.dart';
+import 'package:flutter_amz_clone/router.dart';
 
 void main() {
   runApp(const AMZCloneApp());
@@ -22,15 +24,20 @@ class AMZCloneApp extends StatelessWidget {
               elevation: 0,
               iconTheme: IconThemeData(color: Colors.black),
             )),
+        onGenerateRoute: (routeSettings) => generateRoute(routeSettings),
         home: Scaffold(
             appBar: AppBar(title: const Text('Hello World')),
             body: Column(
               children: [
                 const Center(child: Text('Hello World')),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('Click Me'),
-                ),
+                Builder(builder: (context) {
+                  return ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, AuthScreen.routeName);
+                    },
+                    child: const Text('Click Me'),
+                  );
+                }),
               ],
             )));
   }
