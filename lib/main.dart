@@ -14,31 +14,18 @@ class AMZCloneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-            scaffoldBackgroundColor: GlobalVariables.backgroundColor,
-            colorScheme: const ColorScheme.light(
-              primary: GlobalVariables.secondaryColor,
-            ),
-            appBarTheme: const AppBarTheme(
-              elevation: 0,
-              iconTheme: IconThemeData(color: Colors.black),
-            )),
-        onGenerateRoute: (routeSettings) => generateRoute(routeSettings),
-        home: Scaffold(
-            appBar: AppBar(title: const Text('Hello World')),
-            body: Column(
-              children: [
-                const Center(child: Text('Hello World')),
-                Builder(builder: (context) {
-                  return ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, AuthScreen.routeName);
-                    },
-                    child: const Text('Click Me'),
-                  );
-                }),
-              ],
-            )));
+      title: 'Flutter Demo',
+      theme: ThemeData(
+          scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+          colorScheme: const ColorScheme.light(
+            primary: GlobalVariables.secondaryColor,
+          ),
+          appBarTheme: const AppBarTheme(
+            elevation: 0,
+            iconTheme: IconThemeData(color: Colors.black),
+          )),
+      onGenerateRoute: (routeSettings) => generateRoute(routeSettings),
+      home: const AuthScreen(),
+    );
   }
 }
